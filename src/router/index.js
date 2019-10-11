@@ -246,7 +246,18 @@ export const asyncRoutes = [
       }
     ]
   },
-
+  {
+    path: '/order',
+    component: Layout,
+    children: [
+      {
+        path: 'index',
+        component: () => import('@/views/order/index'),
+        name: 'Order',
+        meta: { title: '订单', icon: 'order' }
+      }
+    ]
+  },
   // {
   //   path: '/error',
   //   component: Layout,
